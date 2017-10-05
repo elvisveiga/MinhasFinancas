@@ -242,6 +242,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\home\home.component.html" />
+    <Content Include="src\app\login\login.component.html" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
@@ -289,6 +290,8 @@
     <TypeScriptCompile Include="src\app\app.routes.ts" />
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\home\Index.ts" />
+    <TypeScriptCompile Include="src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\login\Index.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <PropertyGroup>

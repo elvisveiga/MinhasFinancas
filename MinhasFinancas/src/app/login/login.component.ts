@@ -3,10 +3,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'home.component.html'
+    templateUrl: 'login.component.html'
 })
 
-export class HomeComponent implements OnInit {
+export class LoginComponent implements OnInit {
   
     constructor(private router: Router) {
          

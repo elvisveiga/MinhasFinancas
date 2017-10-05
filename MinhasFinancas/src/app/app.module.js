@@ -13,6 +13,7 @@ var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var app_routes_1 = require("./app.routes");
 var home_component_1 = require("./home/home.component");
+var login_component_1 = require("./login/login.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,8 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent,
-            home_component_1.HomeComponent
+            home_component_1.HomeComponent,
+            login_component_1.LoginComponent
         ],
         providers: [],
         bootstrap: [app_component_1.AppComponent]

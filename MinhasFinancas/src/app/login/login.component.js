@@ -11,20 +11,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var HomeComponent = (function () {
-    function HomeComponent(router) {
+var LoginComponent = (function () {
+    function LoginComponent(router) {
         this.router = router;
     }
-    HomeComponent.prototype.ngOnInit = function () {
+    LoginComponent.prototype.ngOnInit = function () {
     };
-    return HomeComponent;
+    return LoginComponent;
 }());
-HomeComponent = __decorate([
+LoginComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        templateUrl: 'home.component.html'
+        templateUrl: 'login.component.html'
     }),
     __metadata("design:paramtypes", [router_1.Router])
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+], LoginComponent);
+exports.LoginComponent = LoginComponent;
+//# sourceMappingURL=login.component.js.map

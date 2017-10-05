@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routes';
 
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
  
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     ],
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        LoginComponent
     ],
     providers: [
          
