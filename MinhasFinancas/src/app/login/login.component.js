@@ -16,13 +16,16 @@ var LoginComponent = (function () {
         this.router = router;
     }
     LoginComponent.prototype.ngOnInit = function () {
+        this.fileName = "teste";
     };
     return LoginComponent;
 }());
 LoginComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        templateUrl: 'login.component.html'
+        styleUrls: ['../css/matrix-login.css'],
+        templateUrl: 'login.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
     }),
     __metadata("design:paramtypes", [router_1.Router])
 ], LoginComponent);

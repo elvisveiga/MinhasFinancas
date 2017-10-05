@@ -22,7 +22,9 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        templateUrl: 'home.component.html'
+        styleUrls: ['../css/matrix-style.css', '../css/matrix-media.css'],
+        templateUrl: 'home.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
     }),
     __metadata("design:paramtypes", [router_1.Router])
 ], HomeComponent);
