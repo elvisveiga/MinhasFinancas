@@ -1,26 +1,30 @@
 ﻿<div id="loginbox">
-    <form id="loginform" class="form-vertical" action="index.html">
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
         <div class="control-group normal_text"> <h3><img src="img/logo.png" alt="Logo" /></h3></div>
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
-                    <span class="add-on bg_lg"><i class="icon-user"> </i></span><input type="text" placeholder="Username" />
+                    <span class="add-on bg_lg"><i class="icon-user"> </i></span>
+                    <input type="text" placeholder="Username" name="username" [(ngModel)]="model.username" #username="ngModel" required/>
+                    <div *ngIf="f.submitted && !username.valid" class="help-block">Informe seu email</div>
                 </div>
             </div>
         </div>
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
-                    <span class="add-on bg_ly"><i class="icon-lock"></i></span><input type="password" placeholder="Password" />
+                    <span class="add-on bg_ly"><i class="icon-lock"></i></span>
+                    <input type="password" placeholder="Password" name="password" [(ngModel)]="model.password" #password="ngModel" required/>
+                    <div *ngIf="f.submitted && !password.valid" class="help-block">Informe sua senha</div>
                 </div>
             </div>
         </div>
         <div class="form-actions">
             <span class="pull-left">
-                <a href="#" class="flip-link btn btn-info" id="to-recover">Esqueceu sua senha?</a>
+                <button [routerLink]="['/recoverPassword']"  class="flip-link btn btn-info" id="to-recover">Esqueceu sua senha?</button>
             </span>
             <span class="pull-right">
-                <a [routerLink]="['/home']" class="btn btn-success">Entrar</a>
+                <button [routerLink]="['/home']" class="btn btn-success">Entrar</button>
             </span>
         </div>
     </form>
@@ -35,13 +39,13 @@
 
         <div class="form-actions">
             <span class="pull-left">
-                <a href="#" class="flip-link btn btn-success" id="to-login">&laquo; Back to login</a>
+                <button class="flip-link btn btn-success" id="to-login">&laquo; Back to login</button>
             </span>
             <span class="pull-right">
-                <a href="#" class="btn btn-info">Reecover</a>
+                <button class="btn btn-info">Reecover</button>
             </span>
         </div>
     </form>
 </div>
 
-
+ 

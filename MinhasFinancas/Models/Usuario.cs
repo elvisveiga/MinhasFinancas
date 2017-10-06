@@ -12,5 +12,6 @@ namespace MinhasFinancas.Models
         public string Password { get; set; }
         public string Name { get; set; }
         public DateTime Registration_Date { get; set; }
+        public string Token { get; set; }
     }
 }

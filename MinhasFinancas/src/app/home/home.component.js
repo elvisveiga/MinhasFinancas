@@ -10,12 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
+var index_1 = require("../_services/index");
 var HomeComponent = (function () {
-    function HomeComponent(router) {
-        this.router = router;
+    function HomeComponent(userService) {
+        this.userService = userService;
+        this.users = [];
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     }
     HomeComponent.prototype.ngOnInit = function () {
+        this.loadAllUsers();
+    };
+    HomeComponent.prototype.deleteUser = function (_id) {
+        var _this = this;
+        this.userService.delete(_id).subscribe(function () { _this.loadAllUsers(); });
+    };
+    HomeComponent.prototype.loadAllUsers = function () {
+        var _this = this;
+        this.userService.getAll().subscribe(function (users) { _this.users = users; });
     };
     return HomeComponent;
 }());
@@ -26,7 +37,7 @@ HomeComponent = __decorate([
         templateUrl: 'home.component.html',
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [router_1.Router])
+    __metadata("design:paramtypes", [index_1.UserService])
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map

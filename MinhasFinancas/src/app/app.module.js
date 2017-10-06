@@ -12,6 +12,10 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var app_routes_1 = require("./app.routes");
+var index_1 = require("./_helpers/index");
+var index_2 = require("./_directives/index");
+var index_3 = require("./_guards/index");
+var index_4 = require("./_services/index");
 var home_component_1 = require("./home/home.component");
 var login_component_1 = require("./login/login.component");
 var AppModule = (function () {
@@ -29,10 +33,17 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent,
+            index_2.AlertComponent,
             home_component_1.HomeComponent,
             login_component_1.LoginComponent
         ],
-        providers: [],
+        providers: [
+            index_1.customHttpProvider,
+            index_3.AuthGuard,
+            index_4.AlertService,
+            index_4.AuthenticationService,
+            index_4.UserService
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
